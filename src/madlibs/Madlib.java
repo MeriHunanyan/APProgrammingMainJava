@@ -1,5 +1,4 @@
-package MadlibGenerator;
-import java.sql.SQLOutput;
+package madlibs;
 import java.util.Scanner;
 
 public class Madlib {
