@@ -18,6 +18,7 @@ public class Madlib {
 
         System.out.println("year? ");
         int year = scanner.nextInt();
+        scanner.nextLine();
 
         System.out.println("""
                    Madlib: A day at the Zoo
@@ -43,6 +44,6 @@ public class Madlib {
         System.out.println("6: ");
         String six = scanner.nextLine();
 
-        System.out.println("Name: " + UserName + "\nDate: " + month + "/" + day + "/" + year + "\n\n" + "Today, I went to the zoo and saw a " + one + two + ". It was surrounded by " + three + " that " + four + "around it. The " + five + "zookeeper came over to feed the " + two + "some " + six + ".");
+        System.out.println("Name: " + UserName + "\nDate: " + month + "/" + day + "/" + year + "\n\n" + "Today, I went to the zoo and saw a " + one + " " + two + ". It was surrounded by " + three + " that " + four + "around it. The " + five + "zookeeper came over to feed the " + two + " some " + six + ".");
     }
 }
