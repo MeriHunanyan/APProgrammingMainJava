@@ -42,6 +42,56 @@ public class DataFun {
         {
             System.out.println("Your favourite number is odd");
         }
+        switch(UserNum) {
+            case 2:
+                System.out.println("Helium");
+                break;
+            case 10:
+                System.out.println("Neon");
+                break;
+            case 18:
+                System.out.println("Argon");
+                break;
+            case 36:
+                System.out.println("Krypton");
+                break;
+            case 54:
+                System.out.println("Xenon");
+                break;
+            case 86:
+                System.out.println("Radon");
+                break;
+            default:
+                System.out.println("Not the atomic number of a nobal gas");
+
+        // Part 2
+        System.out.println("What's you favourite character?: ");
+        String user_char = scanner.nextLine();
+
+        if (Character.isLetter(user_char.charAt(0)))
+        {
+            if (Character.isUpperCase(user_char.charAt(0)))
+            {
+                System.out.println("Your favourite character is uppercase");
+            } else if (Character.isLowerCase(user_char.charAt(0)))
+            {
+                System.out.println("Your favourite character is lowercase");
+            }
+
+            if (user_char == "a" || user_char == "e" || user_char == "i" || user_char == "o" || user_char == "u")
+            {
+                System.out.println("It's a vowel");
+            } else
+            {
+                System.out.println("It's not a vowel");
+            }
+        } else if (Character. isDigit(user_char.charAt(0)))
+        {
+            System.out.println("Your favourite character is a number");
+        } else
+        {
+            System.out.println("Your favourite character is a symbol");
         }
+
     }
 }
