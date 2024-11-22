@@ -2,16 +2,20 @@ package DataFun;
 
 import java.util.Scanner;
 
-public class DataFun {
-    public static void main(String[] args) {
+public class DataFun
+{
+    public static void main(String[] args)
+    {
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("What's you favourite number?: ");
         int UserNum = scanner.nextInt();
 
-        if (UserNum < 0) {
+        if (UserNum < 0)
+        {
             System.out.println("Your favourite number is negative!");
-        } else {
+        } else
+        {
             System.out.println("Your favourite number is positive");
         }
 
@@ -36,13 +40,15 @@ public class DataFun {
             }
         }
 
-        if (UserNum % 2 == 0){
+        if (UserNum % 2 == 0)
+        {
             System.out.println("Your favourite number is even");
         } else
         {
             System.out.println("Your favourite number is odd");
         }
-        switch(UserNum) {
+        switch(UserNum)
+        {
             case 2:
                 System.out.println("Helium");
                 break;
@@ -63,35 +69,55 @@ public class DataFun {
                 break;
             default:
                 System.out.println("Not the atomic number of a nobal gas");
-
+        }
         // Part 2
+        scanner.nextLine();
         System.out.println("What's you favourite character?: ");
-        String user_char = scanner.nextLine();
+        String user_str = scanner.nextLine();
 
-        if (Character.isLetter(user_char.charAt(0)))
+        boolean is_Letter = false;
+        boolean is_uppercase = false;
+        if (Character.isLetter(user_str.charAt(0)))
         {
-            if (Character.isUpperCase(user_char.charAt(0)))
+            is_Letter = true;  // Set it to true if it's a letter
+            if (Character.isUpperCase(user_str.charAt(0)))
             {
                 System.out.println("Your favourite character is uppercase");
-            } else if (Character.isLowerCase(user_char.charAt(0)))
+                is_uppercase = true;
+            } else
             {
                 System.out.println("Your favourite character is lowercase");
+
             }
 
-            if (user_char == "a" || user_char == "e" || user_char == "i" || user_char == "o" || user_char == "u")
+            if (user_str == "a" || user_str == "e" || user_str == "i" || user_str == "o" || user_str == "u")
             {
                 System.out.println("It's a vowel");
             } else
             {
                 System.out.println("It's not a vowel");
             }
-        } else if (Character. isDigit(user_char.charAt(0)))
+        } else if (Character. isDigit(user_str.charAt(0)))
         {
             System.out.println("Your favourite character is a number");
         } else
         {
             System.out.println("Your favourite character is a symbol");
         }
-
+        char CharUser = user_str.charAt(0);
+        int AsciiValue = (int) CharUser;
+        System.out.println("This is the ASCII value of your character: " + AsciiValue);
+        if (is_Letter)
+        {
+            if (is_uppercase)
+            {
+                int where = AsciiValue - 64;
+                System.out.println("This is where your favourite character is in the alphabet: " + where);
+            } else
+            {
+                int where = AsciiValue - 96;
+                System.out.println("This is where your favourite character is in the alphabet: " + where);
+            }
+        }
     }
 }
