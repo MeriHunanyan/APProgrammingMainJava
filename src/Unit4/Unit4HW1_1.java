@@ -1,9 +1,9 @@
 package Unit4;
-import java.util.Random;
 
+import java.util.Random;
 import java.util.Scanner;
 
-public class Unit4HW1 {
+public class Unit4HW1_1 {
 
     public static void main(String[] args) {
         guessingGame();
@@ -22,28 +22,27 @@ public class Unit4HW1 {
      * the guess is too high, too low, or correct.
      *
      */
-    public static void guessingGame() {
+    public static void guessingGame(){
         //feel free to use the Random class
         Random random = new Random();
         Scanner scanner = new Scanner(System.in);
         int randomNumber = random.nextInt(100) + 1;
         System.out.println("Guess the number: ");
-        int nowInt;
-        while ((nowInt = scanner.nextInt()) != randomNumber) {
-            if (nowInt > randomNumber)
+        int nowIn;
+        while ((nowIn = scanner.nextInt()) != randomNumber)
+        {
+            if (nowIn > randomNumber)
             {
                 System.out.println("Too high! Try again.");
-            } else if(nowInt < randomNumber)
-            {
-                System.out.println("Too low! Try again.");
             } else
             {
-                System.out.println("The guess you gave is either lower or higher then the range or is not a number");
+                System.out.println("Too low! Try again.");
             }
             System.out.println("Guess the number: ");
-            System.out.println("Correct! You've guessed the right number!");
         }
+        System.out.println("Correct! You've guessed the right number!");
     }
+
     /**
      * Tired Turtle
      * Asks the user how many steps they want the turtle to take in its
@@ -80,25 +79,20 @@ public class Unit4HW1 {
         while (true)
         {
             notTamagotchi = true;
-            for (int i = 1; i < 5 && notTamagotchi; i++)
-            {
+            for (int i = 1; i < 5 && notTamagotchi; i++) {
                 System.out.println("Hour " + i + ": Current hunger level is " + hunger);
-                if (hunger >= 40)
-                {
+                if (hunger >= 40) {
                     System.out.println("Feed your animal soon, it is unhappy.");
                 }
                 System.out.println("Do you want to feed your pet? (yes/no): ");
-
-                if (scanner.nextLine().equals("yes"))
-                {
+                
+                if (scanner.nextLine().equals("yes")) {
                     hunger = hunger - 25;
-                    if (hunger < 0)
-                    {
+                    if (hunger < 0) {
                         hunger = 0;
                     }
                 }
-                if (hunger >= 40)
-                {
+                if (hunger >= 40) {
                     System.out.println("End of simulation. Your pet is dead.");
                     notTamagotchi = false;
                     System.out.println(" ------------------------------------------");
