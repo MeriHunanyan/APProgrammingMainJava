@@ -77,7 +77,7 @@ public class Unit4HW2 {
     public static void palindromeChecker(String str)
     {
         for (int i = 0; i < str.length() / 2; ++i)
-        {
+        { //for the extra credit part I just used .isLetterOrDigit() in the if statement
             if (!Character.isLetterOrDigit(str.charAt(i)) || (!Character.isLetterOrDigit(str.charAt(str.length() - 1 - i))))
             {
                 System.out.println("Error: Invalid character detected in " + str);

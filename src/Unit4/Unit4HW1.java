@@ -6,8 +6,8 @@ import java.util.Scanner;
 public class Unit4HW1 {
 
     public static void main(String[] args) {
-        guessingGame();
-        tiredTurtle();
+        //guessingGame();
+        //tiredTurtle();
         notATamagotchi();
         int bob = 5;
         System.out.println(bob);
@@ -54,11 +54,17 @@ public class Unit4HW1 {
     public static void tiredTurtle(){
         Scanner scanner = new Scanner(System.in);
         System.out.println("How many steps should the turtle take in its first move?");
-        int Step = scanner.nextInt();
+        int Step = 0;
+        try {
+            Step = scanner.nextInt();
+        } catch (Exception e) {
+            System.out.println("You did not enter an integer!");
+        }
+
         int Total = Step;
         while (Step != 0)
         {
-            Step = (int) Step / 2;
+            Step =  Step / 2;
             Total = Total + Step;
         }
         System.out.println(Total);
@@ -88,20 +94,26 @@ public class Unit4HW1 {
                     System.out.println("Feed your animal soon, it is unhappy.");
                 }
                 System.out.println("Do you want to feed your pet? (yes/no): ");
-
-                if (scanner.nextLine().equals("yes"))
+                String userAns = scanner.nextLine();
+                if (userAns.equals( "yes"))
                 {
                     hunger = hunger - 25;
                     if (hunger < 0)
                     {
                         hunger = 0;
                     }
-                }
-                if (hunger >= 40)
-                {
+                } else if (hunger >= 40 && userAns.equals("no")) {
                     System.out.println("End of simulation. Your pet is dead.");
                     notTamagotchi = false;
                     System.out.println(" ------------------------------------------");
+                } else if (userAns.equals("no"))
+                {
+                    ;
+                } else
+                {
+                    System.out.println("You did not enter yes or no, try again:)");
+                    i--;
+                    continue;
                 }
                 hunger = hunger + 10;
             }
