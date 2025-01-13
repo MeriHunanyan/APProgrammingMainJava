@@ -20,7 +20,7 @@ public class Zoolightsticket
         //}
         String[] months = {"JANUARY", "FEBRUARY", "MARCH", "APRIL", "MAY", "JUNE", "JULY", "AUGUST", "SEPTEMBER", "OCTOBER", "NOVEMBER"};
         System.out.println("When do you want to visit?(mm/dd/yy) : ");
-        calendar.set(2024, Calendar.months[Integer.parseInt(substring(3,5))], );
+
         String date = scanner.nextLine();
         int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
         System.out.println(dayOfWeek);
