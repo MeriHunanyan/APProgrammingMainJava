@@ -31,7 +31,6 @@ import java.util.Random;
 
         }
         //setters (mutators)
-print
         /**
          * Deposits a specified amount of money into the
          * account
@@ -49,7 +48,6 @@ print
         public double getBalance(){
             return balance;
         }
-
         @Override
         public String toString(){
             return String.format("Balance: $%.2f",balance);

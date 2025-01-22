@@ -10,7 +10,6 @@ public class Main {
         System.out.println(myAccount.getBalance());
         myAccount.withdraw(30);
         System.out.println(myAccount.getBalance());
-        system.
 
     }
 }
