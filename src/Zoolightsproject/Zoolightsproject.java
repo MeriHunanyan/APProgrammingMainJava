@@ -1,5 +1,7 @@
 package Zoolightsproject;
-
+/*
+Group = Ananya, Sydney, Meri
+ */
 import java.util.ArrayList;
 import java.util.Scanner;
 
