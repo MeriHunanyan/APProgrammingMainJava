@@ -6,7 +6,7 @@ assignment: Unit5HW2, P3.4
  */
 
 /**
- * Represents an Employee object with name and salary
+ * Represents an Employee class with name and salary
  */
 class Employee {
     String name;
