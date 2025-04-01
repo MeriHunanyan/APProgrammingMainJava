@@ -12,7 +12,6 @@ public class Main {
         animals.add(new Dog("Rocky", 3, input, "Labrador Retriever"));
         animals.add(new Cat("Winston", 4, input, true));
 
-        System.out.println(animals.get(0).getPersonality());
         for (Animal a : animals)
         {
             System.out.println(a); // prints description of the animal
