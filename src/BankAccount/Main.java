@@ -1,9 +1,7 @@
-
 package BankAccount;
-import java.util.Random;
+
 public class Main {
-    public static void main(String[] args)
-    {
+    public static void main(String[] args) {
         BankAccount myAccount = new BankAccount(50);
         System.out.println(myAccount.getBalance());
         myAccount.deposit(10);
