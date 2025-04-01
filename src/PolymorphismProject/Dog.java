@@ -19,7 +19,7 @@ public class Dog extends Animal
 
     public String toString()
     {
-        return super.toString() + "The" + animal + "'s breed is" + breed;
+        return super.toString() + "The " + animal + "'s breed is " + breed;
     }
     @Override
     public void makeSound()

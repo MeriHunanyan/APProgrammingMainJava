@@ -1,6 +1,7 @@
 package PolymorphismProject;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Animal {
     private String name;
@@ -11,7 +12,7 @@ public class Animal {
     {
         this.name = name;
         this.age = age;
-        this.PersonalityTraits = PersonalityTraits;
+        this.PersonalityTraits = personalityTraits;
     }
 
     public String getName()
@@ -33,7 +34,7 @@ public class Animal {
     {
         return animal + " with the name " + name
                 + ". Whose age is " + age + ". And it is a very "
-                + PersonalityTraits + animal + ". ";
+                + String.join(", ", PersonalityTraits) + " " + animal + ". ";
     }
 
     public void makeSound()
@@ -42,7 +43,7 @@ public class Animal {
     }
     public boolean equals(Object o)
     {
-        if (o instanceof Dog)
+        if (o instanceof Animal)
         {
             Animal other = (Animal) o;
             return this.getName().equals(other.getName()) && this.getAge() == other.getAge() &&

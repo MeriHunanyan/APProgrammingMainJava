@@ -51,7 +51,7 @@ public class Cat extends Animal {
 
     public boolean equals(Object o)
     {
-        if (o instanceof Dog)
+        if (o instanceof Cat)
         {
             Cat other = (Cat) o;
             return this.getName().equals(other.getName()) && this.getAge() == other.getAge() &&
